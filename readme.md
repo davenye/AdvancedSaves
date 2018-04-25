@@ -1,8 +1,8 @@
-### AdvancedSaves
+# AdvancedSaves
 
 ## A modmod for Civ5 Vox Populi
 
-# Provides greater control of saving in MP games
+### Provides greater control of saving in MP games
 
 Please note: This code is absolutely terrible and was coded in anger.
 
