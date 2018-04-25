@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context ColorSet="Beige_Black" Font="TwCenMT22" FontStyle="Shadow">
+
+
+
+
+<Instance Name="SavePointConfig" Size="220,400">
+	<Container Size="220,40" ID="Root" >
+    <Stack Anchor="L,C" Offset="10,0" StackGrowth="Right" Padding="0">
+					
+					
+					<Stack Anchor="L,C" Offset="10,0" StackGrowth="Right" Padding="8">
+					<PullDown Style="GenericPullDown" ScrollThreshold="100" SpaceForScroll="0" Size="160,32" ID="SaveMode"/>
+					<Box Anchor="C,T" Anchorside="I.O" Offset="0,0" Size="40,32" Color="255,255,200,255" ID="IntervalBox" >
+				    <Box Anchor="C,C"  Offset="0,0" Size="38,30" Color="0,0,0,255" >
+				        <EditBox String="1" EditMode="1" Offset="2,0" Size="36,28" Anchor="C,C" ID="IntervalEdit" Font="TwCenMT14" NumberInput="1" MaxLength="4" />
+				    </Box>
+				</Box>
+			</Stack>
+			
+				</Stack>
+	</Container>
+ </Instance>
+
+
+<Instance Name="SavePointConfigLine" Size="700,40">
+	<Container Size="700,40" ID="Root" >
+    	<Stack ID="ConfigsLine" Anchor="L,T" Offset="30,50" StackGrowth="Right" Padding="8">
+    		<Container Size="200,40"><Label ID="WhenTypeo" Anchor="R,C" Offset="0,0" String="XXX" ToolTip="" Font="TwCenMT20" FontStyle="Base" ColorSet="Beige_Black_Alpha" Size="32,80"/></Container>    		
+   	 </Stack>
+	</Container>
+ </Instance>
+
+	  <Box Color="Black.200" Size="Full.Full" ID="AdvSavDialogBox" Hidden="0" ConsumeMouseOver="1" >
+	  	  
+	
+	
+	
+    <Grid Size="870,690" Anchor="C,C" Style="Grid9DetailFive140" ConsumeMouse="1">
+    	<Label Style="MenuTitleCaption" String="Advanced Save Options" />
+    	<Line Color="255,255,200,255" Start="10,195" End="860,195" Width="1" />
+    	
+    	<Line Color="255,255,200,80" Start="10,515" End="860,515" Width="1" />
+    	
+  		<Label Anchor="C,T" TextAnchor="C,C" Offset="0,50" String="Save Dialog Options"/>
+  		<Line Color="255,255,200,160" Start="10,75" End="860,75" Width="1" />
+  		<Label Anchor="C,T" TextAnchor="C,C" Offset="0,202" String="AutoSave Options"/>
+  		<Line Color="255,255,200,160" Start="10,225" End="860,230" Width="1" />
+  		
+  		
+    	<Container ID="AdvancedOptionsPanel" Hidden="0" >
+    	<Line ID="ActiveHighlight" Color="0,255,0,48" Start="45,250" End="825,250" Width="30" />  		
+    <Container Anchor="L,T" Offset="70,20" Hidden="0" Size="870,300">
+    	
+    		
+    		
+    	<Stack StackGrowth="Right" Offset="0,56" Padding="400">
+		<Stack StackGrowth="Down" Padding="-4">
+			
+			<CheckBox ID="AllowQueueSave" String="Allow Queued Saves"  TextAnchorSide="R" TextOffset="32,0" ButtonTexture="assets/UI/Art/Controls/CheckBox2TheBox.dds" ToolTip="Provides option on Save Dialog to perform a 'Queued Save', which is essentially a named autosave that is written when the next autosave point is reached."/>			
+			<CheckBox ID="QueuedSavePopup" String="Queued Save Popup"  TextAnchorSide="R" TextOffset="32,0" ButtonTexture="assets/UI/Art/Controls/CheckBox2TheBox.dds" ToolTip="Show popup when a 'Queued Save' has been completed."/>
+			<CheckBox ID="AllowAutoSaveRequests" String="Allow AutoSave Requests" TextAnchorSide="R" TextOffset="32,0" ButtonTexture="assets/UI/Art/Controls/CheckBox2TheBox.dds" ToolTip="Provided a button on the Save Dialog that will force autosaves to be created in the next turn, regardless of existing settings."/>
+			<CheckBox ID="ShowLastAutoSaveDetails" String="Show Last AutoSave Details"  TextAnchorSide="R" TextOffset="32,0" ButtonTexture="assets/UI/Art/Controls/CheckBox2TheBox.dds" ToolTip="Display information regarding the last autosave that was made for this game, particularly the turn in which is was generated."/>
+			
+				
+			</Stack>
+			
+			<Stack StackGrowth="Down" Padding="-4">
+			
+			
+			
+			
+			<CheckBox ID="AllowForceSave" String="Allow Forced Saves"  TextAnchorSide="R" TextOffset="32,0" ButtonTexture="assets/UI/Art/Controls/CheckBox2TheBox.dds" ToolTip="Provides option on Save Dialog to perform a 'Forced Save', which writes out a completely new save file (not using any existing save file) which captures the turn state as it currently is. [NEWLINE][COLOR_FONT_RED]WARNING: THIS IS NOT RECOMMENDED AND COULD CREATE SAVES THAT RESULT IN INCORRECT BEHAVIOUR WHEN LOADED!!! USE AT OWN RISK." />
+			<CheckBox ID="AllowStaleSave" String="Allow Stale Saves"  TextAnchorSide="R" TextOffset="32,0" ButtonTexture="assets/UI/Art/Controls/CheckBox2TheBox.dds" ToolTip="Provides option on Save Dialog to perform a 'Stale Save', which is like a 'normal' save but uses an autosave from a previous turn. This option is only available when (due to autosave settings) there was no autosave made this turn. [NEWLINE][COLOR_FONT_RED]WARNING: Any progress since the last autosave will not be saved. This option is not recommended and provided only for completeness." />
+			<CheckBox ID="AllowSaveAndQuit" String="Allow &lt;CTRL&gt; Save + Quit"  TextAnchorSide="R" TextOffset="32,0" ButtonTexture="assets/UI/Art/Controls/CheckBox2TheBox.dds"  ToolTip="Allows quitting Civ completely after save if the Control key is held when clicking the save button. A red box will be shown around the button. There is issues with focus and you may need to click on an empty section of UI to get it to register. [NEWLINE][COLOR_FONT_RED]WARNING: If an problem occurs while saving, it is possible that the program may still quit anyway. Use at own risk."/>
+			
+				
+			</Stack>
+			</Stack>
+		</Container>
+		<Container Offset="0,510" Size="670,200">
+			<Stack StackGrowth="Down" Padding="0" Offset="30,18" >
+			<CheckBox ID="NoHumansNoPosts" String="No Humans, No Posts"  TextAnchorSide="R" TextOffset="32,0" ButtonTexture="assets/UI/Art/Controls/CheckBox2TheBox.dds" ToolTip="If there are no humans playing then do not make post-autosaves (since it is somewhat redundant)." />
+			<CheckBox ID="OnlyHumansNoPosts" String="Only Humans, No Posts" TextAnchorSide="R" TextOffset="32,0" ButtonTexture="assets/UI/Art/Controls/CheckBox2TheBox.dds" ToolTip="If there are only humans playing then do not make post-autosaves (since it is somewhat redundant)." />			
+			</Stack>
+			
+			<Stack StackGrowth="Down" Padding="0" Offset="280,18" >
+			<CheckBox ID="DisplayAutosaveMessages" String="Display Messages"  TextAnchorSide="R" TextOffset="32,0" ButtonTexture="assets/UI/Art/Controls/CheckBox2TheBox.dds" ToolTip="Show text event when autosave was made. May be useful while building confidence that autosaves are being generated as expected."/>
+			
+			
+			</Stack>
+			<Label String="Min Turn for Normal Autosaves" Offset="530,28" ToolTip="Minimum turn that the game must reach before post-autosaves are made. This exists because disabling autosaves can make early game run smoother. Of course, you are gambling that there will be no crashes!"/>
+			<Label String="Min Turn for Post Autosaves" Offset="530,60"  ToolTip="Minimum turn that the game must reach before post-autosaves are made. This exists because post-autosaves can cause an unpleasant stutter that is particularly noticable in early game"/>
+			
+			<Box Anchor="C,T" Anchorside="I.O" Offset="490,16" Size="40,32" Color="255,255,200,255"  >
+				    <Box Anchor="C,C"  Offset="0,0" Size="38,30" Color="0,0,0,255" >
+				        <EditBox String="0" EditMode="1" Offset="2,0" Size="36,28" Anchor="C,C" ID="MinTurnNormal" Font="TwCenMT14" NumberInput="1" MaxLength="4" />
+				    </Box>
+				</Box>
+						
+			<Box Anchor="C,T" Anchorside="I.O" Offset="490,54" Size="40,32" Color="255,255,200,255"  >
+				    <Box Anchor="C,C"  Offset="0,0" Size="38,30" Color="0,0,0,255" >
+				        <EditBox String="0" EditMode="1" Offset="2,0" Size="36,28" Anchor="C,C" ID="MinTurnPost" Font="TwCenMT14" NumberInput="1" MaxLength="4" />
+				    </Box>
+				</Box>	
+				
+		</Container>
+		<Container Offset="0,0" Size="870,690">
+			<Line Color="255,255,200,160" Start="280,250" End="280,500" Width="1" />
+			
+			<Line Color="255,255,200,160" Start="507,250" End="507,500" Width="1" />
+			
+	    <Stack ID="Configs" Anchor="L,T" Offset="30,240" StackGrowth="Right" Padding="1" >
+	    	<Label ID="WhenType" Anchor="C,C" Offset="110,0" String="Category" ToolTip="In order of priority, the situations in which the autosave rules apply. The current situation is highlighted in green." Font="TwCenMT20" FontStyle="Base" ColorSet="Beige_Black_Alpha"/>
+	    	<Label ID="col2" Anchor="C,C" Offset="85,0" String="Normal Autosaves" ToolTip="Rule for Autosaves" Font="TwCenMT20" FontStyle="Base" ColorSet="Beige_Black_Alpha" Size="32,80"/>
+				<Label ID="col3" Anchor="C,C" Offset="95,0" String="Post Autosaves" ToolTip="Rule for Post-Autosaves" Font="TwCenMT20" FontStyle="Base" ColorSet="Beige_Black_Alpha" Size="32,80"/>
+	    </Stack>
+	
+	    <Stack ID="ConfigLines" Anchor="L,T" Offset="30,210" StackGrowth="Down" Padding="2" >
+	
+	    </Stack>
+    </Container>
+    	</Container>
+    	<Container Offset="0,10" Size="870,690">
+    		<Line Color="255,255,200,160" Start="10,590" End="860,590" Width="1" />
+				<GridButton ID="AcceptButton" Size="140,30" Offset="30,60" Anchor="R,B" Style="BaseButton" ToolTip="TXT_KEY_ACCEPT_TOOLTIP">
+					<Label Anchor="C,C" Offset="0,0" String="Accept" Font="TwCenMT20" FontStyle="Shadow" ColorSet="Beige_Black_Alpha"/>
+				</GridButton>
+				
+				<GridButton ID="DefaultsButton" Size="140,30" Offset="0,60" Anchor="C,B" Style="BaseButton" ToolTip="TXT_KEY_DEFAULTS_TOOLTIP">
+					<Label Anchor="C,C" Offset="0,0" String="Defaults" Font="TwCenMT20" FontStyle="Shadow" ColorSet="Beige_Black_Alpha"/>
+				</GridButton>
+				
+				<GridButton Anchor="L,B"  Style="SmallButton" Size="150,32"  Offset="30,60" StateOffsetIncrement="0,0" ID="CancelButton"  >
+			    <Label Anchor="C,C"  Offset="0,0"  String="TXT_KEY_CANCEL_BUTTON" Font="TwCenMT18" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" />
+				</GridButton>
+  
+  	</Container>
+
+	
+    </Grid>
+  </Box>	
+		
+</Context>

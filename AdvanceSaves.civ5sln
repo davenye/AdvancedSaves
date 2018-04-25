@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# ModBuddy Solution File, Format Version 11.00
+Project("{F5FC21B5-7CC2-458A-ABBA-992F515BBA20}") = "AdvanceSaves", "AdvanceSaves\AdvanceSaves.civ5proj", "{834205DF-D1E6-433D-976B-842E793A1497}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|x86 = Default|x86
+		Deploy Only|x86 = Deploy Only|x86
+		Package Only|x86 = Package Only|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{834205DF-D1E6-433D-976B-842E793A1497}.Default|x86.ActiveCfg = Default|x86
+		{834205DF-D1E6-433D-976B-842E793A1497}.Default|x86.Build.0 = Default|x86
+		{834205DF-D1E6-433D-976B-842E793A1497}.Deploy Only|x86.ActiveCfg = Deploy Only|x86
+		{834205DF-D1E6-433D-976B-842E793A1497}.Deploy Only|x86.Build.0 = Deploy Only|x86
+		{834205DF-D1E6-433D-976B-842E793A1497}.Package Only|x86.ActiveCfg = Package Only|x86
+		{834205DF-D1E6-433D-976B-842E793A1497}.Package Only|x86.Build.0 = Package Only|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

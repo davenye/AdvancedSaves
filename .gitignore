@@ -1,0 +1,7 @@
+# user options?
+*.civ5suo
+
+# output
+Build/
+
+Packages/
