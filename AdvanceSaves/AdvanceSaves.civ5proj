@@ -20,10 +20,20 @@
     <SupportsMac>true</SupportsMac>
     <AssemblyName>AdvanceSaves</AssemblyName>
     <RootNamespace>AdvanceSaves</RootNamespace>
-    <ModReferences />
+    <ModReferences>
+    </ModReferences>
     <ModContent>
     </ModContent>
     <ModProperties />
+    <ModDependencies>
+      <Association>
+        <Type>Mod</Type>
+        <Name>(1) Community Patch</Name>
+        <Id>d1b6328c-ff44-4b0d-aad7-c657f83610cd</Id>
+        <MinVersion>0</MinVersion>
+        <MaxVersion>999</MaxVersion>
+      </Association>
+    </ModDependencies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
     <OutputPath>.</OutputPath>
